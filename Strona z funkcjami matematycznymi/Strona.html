@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html lang="pl-PL"> 
+<head> 
+		<title> Ludera Wiktor </title> 
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="styl.css">
+</head>    
+    <body>
+        <header>
+            <h1>Funkcje Matematyczne i Ćwiczenia</h1>
+            <p>Wybierz ćwiczenie lub zadanie, aby zobaczyć ich działanie oraz kod źródłowy.</p>
+        </header>
+        <main>
+            <nav>
+            <!--<button id="toggleBtn">Zmień widok</button>-->
+                <div class="menu_cwiczenia">
+                    <h2 style="text-align: center;">Wybierz Ćwiczenie:</h2>
+                    <ul id="lista_cwiczen">
+                        <li><button onclick="pokakodcw1()">Ćwiczenie 1</button></li>
+                        <li><button onclick="pokakodcw2()">Ćwiczenie 2</button></li>
+                    </ul>
+                </div>
+                <div class="menu_funkcje">
+                    <h2 style="text-align: center;">Wybierz Zadanie:</h2>
+                    <ul id="lista_funkcji">
+                        <li><button onclick="pokakod1()">Zadanie 1</button></li>
+                        <li><button onclick="pokakod2()">Zadanie 2</button></li>
+                        <li><button onclick="pokakod3()">Zadanie 3</button></li>
+                        <li><button onclick="pokakod4()">Zadanie 4</button></li>
+                        <li><button onclick="pokakod5()">Zadanie 5</button></li>
+                        <li><button onclick="pokakod6()">Zadanie 6</button></li>
+                        <li><button onclick="pokakod7()">Zadanie 7</button></li>
+                        <li><button onclick="pokakod8()">Zadanie 8</button></li>
+                        <li><button onclick="pokakod9()">Zadanie 9</button></li>
+                        <li><button onclick="pokakod10()">Zadanie 10</button></li>
+                        <li><button onclick="pokakod11()">Zadanie 11</button></li>
+                        <li><button onclick="pokakod12()">Zadanie 12</button></li>
+                        <li><button onclick="pokakod13()">Zadanie 13</button></li>
+                        <li><button onclick="pokakod14()">Zadanie 14</button></li>
+                        <li><button onclick="pokakod15()">Zadanie 15</button></li>
+                    </ul>
+                </div>
+            </nav>
+            <section>
+                <div class="funkcja">
+                    <h2 style="text-align: center;">Tutaj będzie wyświetlane wybrane zadanie:</h2>
+                    <div class="wynik_funkcji">
+                        <!--Ćwiczenie 1-->
+                        <div id="cw1" style="display:none;">
+                            <h3> Ćwiczenie 1 </h3>
+                            <h4> Treść wykonanego ćwiczenia:</h4>
+                            <h4>Uruchom skrypt podany poniżej i przeanalizuj jego działanie. Dodaj własne komentarze oraz uzupełnij o własne 
+                                przykłady prezentujące działanie co najmniej 3 z wybranych metod obiektów Global, Number, Math.</h4>
+                            <p>Podaj wartość_XY: </p>
+                            x=<input id="input1" value=100 placeholder="Podaj x"> </input>
+                            <br><br> 
+                            <button id="b1" onclick="f1()"> Oblicz_XY </button>
+                            
+                            <div class="wynik_zadania" id="wynik_cw1" style="display:none;">
+                                <h3>Wynik ćwiczenia 1</h3>
+                                <p id="wynikcw1" ></p>
+                            </div>
+                        </div>
+                        <!--Ćwiczenie 2-->
+                        <div id="cw2" style="display:none;">
+                            <h3> Ćwiczenie 2 </h3>
+                            <h4> Treść wykonanego ćwiczenia:</h4>
+                            <h4>Uzupełnij skrypt dodając obsługę funkcji f3() przy zdarzeniu kliknięcia przycisku z wyświetlaniem odpowiedniej 
+                                informacji na stronie. Zdefiniuj funkcję f4_XY(), gdzie XY- twoje inicjały, korzystając z definicji funkcji f3() w taki 
+                                sposób aby wyświetlany był również komunikat o błędzie dzielenia przez zero, jeżeli wprowadzimy wartość x równą 
+                                zero. </h4>
+                            <label>Wprowadź liczbę:</label>
+                            <input type="text" id="input2" placeholder="Podaj liczbę">
+                            <br><br>
+                            <button id="sprawdz_wynik">Sprawdź wynik</button>
+                            <div class="wynik_zadania" id="wynik_cw2" style="display:none;">
+                                <h3>Wynik ćwiczenia 2</h3>
+                                <p id="paragrafcw2"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 1-->
+                        <div id="zadanie1" style="display:none;">
+                            <h3>Zadanie 1</h3>
+                            <h4>Skrypt sprawdza czy wartość wprowadzona do pola tekstowego jest liczbą. Jeżeli tak, to czy jest to liczba dodatnia, zero czy liczba ujemna.</h4>
+                            Sprawdź liczbe: <input type="text" id="liczba_do_sprawdzenia" value="" placeholder="Podaj liczbę"/>
+                            <br><br>
+                            <button onclick="function1()">Sprawdź</button><br>
+                            <div class="wynik_zadania" id="wynik_zadania1" style="display:none;">
+                                <h3>Wynik zadania 1</h3>
+                                <p id="p1"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 2-->
+                        <div id="zadanie2" style="display:none;">
+                            <h3>Zadanie 2</h3>
+                            <h4>Skrypt wyświetla kolejne liczby całkowite z zakresu podanego w dwóch polach tekstowych.</h4>
+                            Podaj pierwszą wartość: <input type="text" id="tekst1" placeholder="Podaj liczbę"/>
+                            <br><br>
+                            Podaj drugą wartość: <input type="text" id="tekst2" placeholder="Podaj liczbę"/>
+                            <br><br>
+                            <button onclick="function2()">Wyświetl</button><br>
+                            <div class="wynik_zadania" id="wynik_zadania2" style="display:none;">
+                                <h3>Wynik zadania 2</h3>
+                                <p id="p2"></p><br>
+                            </div>
+                        </div>
+                        <!--Zadanie3-->
+                        <div id="zadanie3" style="display:none;">
+                            <h3>Zadanie 3</h3>
+                            <h4> Skrypt wyświetlaja wszystkie liczby z przedziału [a,b], które są podzielne przez n.</h4>
+                            Podaj wartość początkową przedziału: <input type="text" id="tekst3" placeholder="Podaj wartość a"/>
+                            <br><br>
+                            Podaj wartośc końcową przedziału: <input type="text" id="tekst4" placeholder="Podaj wartość b"/>
+                            <br><br>
+                            Podaj wartość ilorazu: <input type="text" id="tekst5" placeholder="Podaj wartość n"/>
+                            <br><br>
+                            <button onclick="function3()">Wyświetl</button><br>
+                            <div class="wynik_zadania" id="wynik_zadania3" style="display:none;">
+                                <h3>Wynik zadania 3</h3>
+                                <p id="p3"></p><br>
+                            </div>
+                        </div>
+                        <!--Zadanie 4-->
+                        <div id="zadanie4" style="display:none;">
+                            <h3>Zadanie 4</h3>
+                            <h4>Wyświetlanie ilości i sumy cyfr liczby całkowitej n wprowadzonej do pola tekstowego.</h4>
+                            Podaj liczbę do zsumowania jej cyfr: <input type="text" id="tekst6" placeholder="Podaj liczbę n"/>
+                            <br><br>
+                            <button onclick="function4()">Wyświetl</button><br>
+                            <div class="wynik_zadania" id="wynik_zadania4" style="display:none;">   
+                                <h3>Wynik zadania 4</h3>                          
+                                <p id="p4"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 5-->
+                        <div id="zadanie5" style="display:none;">
+                            <h3>Zadanie 5</h3>
+                            <h4>Skrypt, który wyznaczy silnię liczby n.</h4>
+                            Podaj liczbę do sprawdzenia: <input type="text" id="tekst11" placeholder="Podaj liczbę"/>
+                            <br><br>
+                            <button onclick="function5()">Wyznacz silnie</button><br> 
+                            <div class="wynik_zadania" id="wynik_zadania5" style="display:none;">    
+                                <h3>Wynik zadania 5</h3>                          
+                                <p id="p5"></p><br>
+                            </div>
+                        </div>
+                        <!--Zadanie 6-->
+                        <div id="zadanie6" style="display:none;">
+                            <h3>Zadanie 6</h3>
+                            <h4>Wyświetlanie n-kolejnych potęg naturalnych liczby całkowitej p: p1, …, pn.</h4>
+                            
+                            <br>
+                            <label>Wprowadź liczbę do spotęgowania:</label>
+                            <input type="number" id="liczba_poteg" placeholder="Podaj liczbę">
+                            <br><br>
+                            <label>Wprowadź liczbę liczbę potęg:</label>
+                            <input type="number" id="potega" placeholder="Podaj liczbę">
+                            <br><br>
+                            <button onclick="function6()">Oblicz potęgi</button>
+                            <div class="wynik_zadania" id="wynik_zadania6" style="display:none;"> 
+                                <h3>Wynik zadania 6</h3>                          
+                                <p id="p6"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 7-->
+                        <div id="zadanie7" style="display:none;">
+                            <h3>Zadanie 7</h3>
+                            <h4>Dodawanie, odejmowanie, mnożenie, dzielenie, potęgowanie liczb rzeczywistych i wyświetlanie wyniku z możliwością ustalania formatu.</h4>
+                            Podaj pierwszą liczbę: <input id="i1" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj drugą liczbę: <input id="i2"  placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj format ilu przecinkowa ma być liczba: <input id="i3" value="0">
+                            <br><br>
+                            <select name="option" id="s1">
+                                <option value="1">Mnozenie</option>
+                                <option value="2">Dzielenie</option>
+                                <option value="3">Dodawanie</option>
+                                <option value="4">Odejmowanie</option>
+                                <option value="5">Potegowanie</option>
+                            </select>
+                            <br><br>
+                           
+                            <button onclick="function7()">Wykonaj obliczenia</button>
+                           
+                            <div class="wynik_zadania" id="wynik_zadania7" style="display:none;"> 
+                                <h3>Wynik zadania 7</h3>                            
+                                <p id="w1"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 8-->
+                        <div id="zadanie8" style="display:none;">
+                            <h3>Zadanie 8</h3>
+                            <h4>Konwersja liczb z systemu o podstawie p na system dziesiętny i odwrotnie.</h4>
+                            Podaj liczbę całkowitą: <input id="i4" placeholder="Podaj liczbe">
+                            <br><br>
+                            <select name="option" id="s2">
+                                <option value="1">Z dziesiętnego na binarny</option>
+                                <option value="2">Z binarnego na dziesiętny</option>
+                            </select>
+                            <br><br>
+                            <button onclick="function8()">Wykonaj obliczenia</button>
+                            
+                            <div class="wynik_zadania" id="wynik_zadania8" style="display:none;"> 
+                                <h3>Wynik zadania 8</h3>                              
+                                <p id="w2"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 9-->
+                        <div id="zadanie9" style="display:none;">
+                            <h3>Zadanie 9</h3>
+                            <h4>Losowanie  z powtórzeniami i bez powtórzeń n (n>0) liczb całkowitych 
+                                z przedziału [a,b] podanego wpolach tekstowych.</h4>
+                            Podaj początek przedziału: <input id="i5" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj koniec przedziału: <input id="i6" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj ilosc losowań: <input id="i7" placeholder="Podaj liczbę"s>
+                            <p>Losowanie bez powtórzeń <input type="checkbox" name="chbox1"></p>
+                            <button onclick="function9()">Wykonaj obliczenia</button>
+
+                            <div class="wynik_zadania" id="wynik_zadania9" style="display:none;">
+                                <h3>Wynik zadania 9</h3>                            
+                                <p id="w3"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie10-->
+                        <div id="zadanie10" style="display:none;">
+                            <h3>Zadanie 10</h3>
+                            <h4>Obliczanie wartości średniej i maksymalnej z wylosowanego zbioru.</h4>
+                            Podaj początek przedziału: <input id="poczatek" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj koniec przedziału: <input id="koniec" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj ilosc losowań: <input id="i8" placeholder="Podaj liczbę">
+                            <br><br>
+                            <button onclick="function10()">Wykonaj obliczenia</button>
+                            
+                            <div class="wynik_zadania" id="wynik_zadania10" style="display:none;">
+                                <h3>Wynik zadania 10</h3>                               
+                                <p>Wartość średnia:</p>
+                                <p id="w4"></p>
+                                <p>Największa liczba:</p>
+                                <p id="w5"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 11-->
+                        <div id="zadanie11" style="display:none;">
+                            <h3>Zadanie 11</h3>
+                            <h4>Skrypt wyświetla ilości liczb z wylosowanego zbioru, których wartość jest równa liczbie x wprowadzonej do pola tekstowego.</h4>
+                            Podaj początek przedziału: <input id="poczatek2" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj koniec przedziału: <input id="koniec2" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj ilosc losowań: <input id="i9" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj liczbę x: <input id="x" placeholder="Podaj liczbę">
+                            <br><br>
+                            <button onclick="function11()">Sprawdź liczbę x</button>
+                            
+                            <div class="wynik_zadania" id="wynik_zadania11" style="display:none;"> 
+                                <h3>Wynik zadania 11</h3>                         
+                                <p id="w6"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 12-->
+                        <div id="zadanie12" style="display:none;">
+                            <h3>Zadanie 12</h3>
+                            <h4>Skrypt porządkuje rosnąco i malejąco wylosowane liczby z przedziału podanego przedziału.</h4>
+                            Podaj początek przedziału:<input id="poczatek3" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj koniec przedziału: <input id="koniec3" placeholder="Podaj liczbę">
+                            <br><br>
+                            Podaj ilosc losowań: <input id="i10" placeholder="Podaj liczbę">
+                            <br><br>
+                            <button onclick="function12()">Sprawdź przedział</button>
+                            
+                            <div class="wynik_zadania" id="wynik_zadania12" style="display:none;">  
+                                <h3>Wynik zadania 12</h3>                                                        
+                                <p>Posortowane rosnaco:</p>
+                                <p id="w7"></p>
+                                <p>Posortowane malejąco: </p>
+                                <p id="w8"></p>
+                            </div>
+                        </div>
+                        <!--Zadanie 13-->
+                        <div id="zadanie13" style="display:none;">
+                            <h3>Zadanie 13</h3>
+                            <h4>Po wczytaniu dwóch liczb całkowitych – a, b, skrypt pyta o ich iloczyn do momentu aż zostanie podany prawidłowy wynik. 
+                                Następnie wyświetlany jest prawidłowy wynik oraz ilość prób podawania wyniku.</h4>
+                            <p id="zliczanie_prob"></p> 
+                            Podaj pierwszą wartość: <input type="text" id="tekst8a" placeholder="Podaj liczbę"/>
+                            <br><br>
+                            Podaj drugą wartość: <input type="text" id="tekst8b" placeholder="Podaj liczbę"/>
+                            <br><br>
+                            <button onclick="function13()">Sprawdź</button><br> 
+                            <p id="p8"></p><br>
+                        </div>
+                        <!--Zadanie 14-->
+                        <div id="zadanie14" style="display:none;">
+                            <h3>Zadanie 14</h3>
+                            <h4>Podawaj liczby z przedziału od 1 do 100 do momentu aż liczba będzie równa wartości 
+                                wylosowanej z zakresu od 1 do 100. Jeżeli podana wartość różni się od wylosowanej program informuje
+                                czy jest to wartość większa, czy mniejsza od wartości wylosowanej. Po zakończeniu wyświetla się ilość 
+                                wykonanych prób. </h4>
+                            <label>Podaj liczbę do sprawdzenia: </label>
+                            <input type="number" id="liczba_podana" min="1" max="100" >
+                            <br><br>
+                            <button onclick="function14()">Sprawdź</button>
+                            
+                            <div class="wynik_zadania" id="wynik_zadania14" style="display:none;">
+                                <h3>Wynik zadania 14</h3>                             
+                                <p id="wiadomosc"></p>
+                                <p id="liczba_prob"></p>
+                            </div>
+                            
+                        </div>
+                        <!--Zadanie 15-->
+                        <div id="zadanie15" style="display:none;">
+                            <h3>Zadanie 15</h3>
+                            <h4>Po podaniu do 2 pól tekstowych liczb całkowitych k, n z przedziału <1;20> liczby wyświetlają w kolejnych k-wierszach liczb w 
+                                następujący sposób:  
+                                1 2 3 .. n-1 n 
+                                1 2 3 … n-1 
+                                … 
+                                1 2 
+                                1  </h4>
+                           
+                            Podaj pierwszą liczbę: <input type="text" id="tekst16a" value="" placeholder="Podaj liczbę:"/>
+                            <br><br>
+                            Podaj drugą liczbę: <input type="text" id="tekst16b" value="" placeholder="Podaj liczbę:"/>
+                            <br><br>
+                            <button onclick="function15()">Wyświetl</button><br>
+                             
+                            <div class="wynik_zadania" id="wynik_zadania15" style="display:none;">
+                                <h3>Wynik zadania 15</h3> 
+                                <p id="p16"> </p><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kod">
+                    <h2 style="text-align: center;">Tutaj będzie wyświetlany kod źródłowy:</h2>
+                    <div class="wynik_kodu">
+                        <pre id="kodfunkcjicw1" style="display:none;"></pre>
+                        <pre id="kodfunkcjicw2" style="display:none;"></pre>
+                        <pre id="kodfunkcji1" style="display:none;"></pre>
+                        <pre id="kodfunkcji2" style="display:none;"></pre>
+                        <pre id="kodfunkcji3" style="display:none;"></pre>
+                        <pre id="kodfunkcji4" style="display:none;"></pre>
+                        <pre id="kodfunkcji5" style="display:none;"></pre>
+                        <pre id="kodfunkcji6" style="display:none;"></pre>
+                        <pre id="kodfunkcji7" style="display:none;"></pre>
+                        <pre id="kodfunkcji8" style="display:none;"></pre>
+                        <pre id="kodfunkcji9" style="display:none;"></pre>
+                        <pre id="kodfunkcji10" style="display:none;"></pre>
+                        <pre id="kodfunkcji11" style="display:none;"></pre>
+                        <pre id="kodfunkcji12" style="display:none;"></pre>
+                        <pre id="kodfunkcji13" style="display:none;"></pre>
+                        <pre id="kodfunkcji14" style="display:none;"></pre>
+                        <pre id="kodfunkcji15" style="display:none;"></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Autor: Wiktor Ludera</p>
+        </footer>
+        <script src="funkcje.js"></script>
+    </body>
+</html>
